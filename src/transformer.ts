@@ -59,10 +59,20 @@ function needsNote(fitted: Fitted, theme: Painter | undefined): string[] {
   return [theme ? theme.fg("dim", note) : note];
 }
 
+// Mermaid label text is plain text, so Markdown punctuation is escaped before pi-tui parses it.
+const escapeMarkdown = (text: string): string => text.replace(/[\\`*_[\]<>#|~$]/g, "\\$&");
+
+// An ordered list wraps to the terminal width; pi-tui keeps each item's own number.
+function legendList(fitted: Fitted): string {
+  if (fitted.kind === "framed" || fitted.legend.length === 0) return "";
+  return `\n${fitted.legend.map((entry) => `${entry.key}. ${escapeMarkdown(entry.text)}`).join("\n")}\n`;
+}
+
 function drawBlock(token: Token & { text: string }, width: number, theme: Painter | undefined): string {
   const fitted = fitDiagram(token.text, width);
   if (!fitted) return token.raw;
-  return `${[...rows(fitted.art, theme), ...needsNote(fitted, theme)].map(codeSpan).join("  \n")}\n`;
+  const art = [...rows(fitted.art, theme), ...needsNote(fitted, theme)].map(codeSpan).join("  \n");
+  return `${art}\n${legendList(fitted)}`;
 }
 
 // Pi skips thinking blocks and, outside "streaming" mode, partial messages; v1 also leaves every

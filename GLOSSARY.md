@@ -9,8 +9,12 @@ A ` ```mermaid ` block that Pi's own transformer left undrawn because the diagra
 _Avoid_: raw block, failed diagram
 
 **Variant**:
-A rewritten Mermaid source made from a pending block, for example with a different flowchart direction.
+A rewritten Mermaid source made from a pending block, for example with a different direction or with numbered labels.
 _Avoid_: layout, attempt
+
+**Legend**:
+The ordered list under a drawn sequence diagram with the full text of each label the variant replaced with a number.
+_Avoid_: footnotes, key list
 
 **Fit**:
 Choosing the first variant whose drawn width is less than or equal to the available width.

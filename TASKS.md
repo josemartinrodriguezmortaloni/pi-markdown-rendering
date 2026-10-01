@@ -13,4 +13,8 @@
 - [x] Gates: typecheck, lint, complexity (with a probe), test
 - [x] README with limits
 - [x] Before/after captures in Pi at 80 columns (tmux)
-- [ ] With approval: delete `~/.pi/agent/AGENTS.md:70` and register the plugin in `~/.pi/agent/settings.json`
+- [x] Delete `~/.pi/agent/AGENTS.md:70` (done by the user) and install the plugin with `pi install`
+- [x] `classDiagram` variant: direction LR to TB, RL to BT
+- [x] `sequence.ts`: numbered labels with a legend (long labels first, then all; notes included; plain `autonumber`)
+- [x] Pi capture of the payment sequence at 120 columns with its legend
+- [ ] Propose multi-line message labels upstream in `grok-mermaid`

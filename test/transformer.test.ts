@@ -96,17 +96,51 @@ describe("flowchart variants", () => {
   });
 });
 
-describe("framed source", () => {
-  it("frames a sequenceDiagram with long messages that is wider than 100 columns", () => {
-    const art = render(SEQUENCE_LONG_MESSAGES);
-    expect(art?.width).toBeGreaterThan(100);
-    const output = throughPi(fenced(SEQUENCE_LONG_MESSAGES), context({ availableWidth: 100 }));
-    expect(rowsOf(output)).toEqual([
-      ...sourceBox(SEQUENCE_LONG_MESSAGES, 100).plain,
-      `(diagram needs ${art?.width} columns)`,
-    ]);
+describe("class variants", () => {
+  it("draws a classDiagram with direction LR top to bottom when that fits", () => {
+    const output = throughPi(fenced(CLASS_LR), context({ availableWidth: 130 }));
+    expect(rowsOf(output)).toEqual(render(CLASS_LR.replace("direction LR", "direction TB"))?.plain);
+  });
+});
+
+describe("sequence legend", () => {
+  // The drawn rows end at the first blank line; the legend list follows it.
+  const split = (output: string): [string, string] => {
+    const [diagram = "", ...rest] = output.split("\n\n");
+    return [diagram, rest.join("\n\n")];
+  };
+
+  it("draws a sequenceDiagram with long messages in 100 columns with numbered labels", () => {
+    expect(render(SEQUENCE_LONG_MESSAGES)?.width).toBeGreaterThan(100);
+    const [diagram, legend] = split(
+      throughPi(fenced(SEQUENCE_LONG_MESSAGES), context({ availableWidth: 100 })),
+    );
+    for (const row of rowsOf(diagram)) expect(widthOf(row)).toBeLessThanOrEqual(100);
+    expect(rowsOf(diagram).join("\n")).toMatch(/│\s+1\s+│/);
+    expect(legend).toBe(
+      [
+        "1. POST /subscriptions/renew with the stored payment method",
+        "2. charge(customerId, planId, idempotencyKey)",
+        "3. 200 OK with the renewed subscription and the next invoice date",
+        "",
+      ].join("\n"),
+    );
   });
 
+  it("draws sequence-complete at 100 columns, numbering only long labels and the note", () => {
+    const [diagram, legend] = split(throughPi(fenced(SEQUENCE_COMPLETE), context({ availableWidth: 100 })));
+    expect(rowsOf(diagram).join("\n")).toContain("POST /:id/complete");
+    expect(legend.split("\n").at(-2)).toBe("6. si falla el desvío, rollback");
+  });
+
+  it("escapes Markdown punctuation in the legend", () => {
+    const src = "sequenceDiagram\n    A->>B: set PENDING_PAYMENT on the order with *care* and `ticks`";
+    const [, legend] = split(transform()(fenced(src), context({ availableWidth: 30 })));
+    expect(legend).toBe("1. set PENDING\\_PAYMENT on the order with \\*care\\* and \\`ticks\\`\n");
+  });
+});
+
+describe("framed source", () => {
   it("frames 8 participants in 60 columns without passing the available width", () => {
     const output = throughPi(fenced(SEQUENCE_EIGHT_PARTICIPANTS), context({ availableWidth: 60 }));
     expect(output).not.toContain("```mermaid");
@@ -114,8 +148,8 @@ describe("framed source", () => {
   });
 
   it.each([
-    ["class-lr", CLASS_LR, 142],
-    ["sequence-complete", SEQUENCE_COMPLETE, 141],
+    ["class-lr", CLASS_LR, 127],
+    ["sequence-complete", SEQUENCE_COMPLETE, 96],
   ])("frames the %s fixture at 80 columns", (_name, src, needs) => {
     const output = throughPi(fenced(src), context());
     expect(rowsOf(output)).toEqual([...sourceBox(src, 78).plain, `(diagram needs ${needs} columns)`]);
@@ -169,6 +203,6 @@ describe("theme", () => {
   it("colors rows like Pi and dims the width note", () => {
     const output = transform("streaming", painter)(fenced(SEQUENCE_COMPLETE), context());
     expect(output).toContain("<borderMuted>");
-    expect(output).toContain("<dim>(diagram needs 141 columns)</dim>");
+    expect(output).toContain("<dim>(diagram needs 96 columns)</dim>");
   });
 });
