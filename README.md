@@ -1,18 +1,39 @@
 ```text
-                                              ┌─────────────┐     ┌─────────┐
- Markdown answers that fit the terminal.      │ ### Heading ├────▶│ Heading │
-                                              └─────────────┘     └─────────┘
- pi install git:github.com/josemartinrodriguezmortaloni/pi-markdown-rendering
-                                              ┌──────────────┐    ┌──────────────┐
- h3–h6 headings without # marks.              │ flowchart LR ├───▶│ flowchart TD │
-                                              └──────────────┘    └──────────────┘
- ⚠ Status: 0.1.0. Pins grok-mermaid 0.2.3 and Pi 0.99.2.
-                                              ┌────────────┐      ┌───────────┐
- Wide Mermaid diagrams, redrawn to fit.       │ long label ├─────▶│ 1. legend │
-                                              └────────────┘      └───────────┘
+                                                                                                      ⢀⡀⡠⡠⡢⡠⡀
+ Markdown answers that fit the terminal.                                                            ⢀⠔⣠⣞⡶⣕⡮⣪⡌⠄
+                                                                                                    ⢰⢜⢾⡷⣟⡷⡯⡿⡮⢕⡀
+ pi install git:github.com/josemartinrodriguezmortaloni/pi-markdown-rendering                       ⡀⠋⣓⢯⡛⢊⠛⢉⢿⡘⢢ ⡀
+                                                                                                 ⡠⡄⣎⣧⢐⢜⣟⣿⢦⣴⣿⣙⢢⠣⢠⠆
+ h3–h6 headings without # marks.                                                              ⢀⢠⢮⣚⢮⠓⠋⢱⠙⢌⢘⠍⡗⠕⡘⠜⣔⡇⠅
+                                                                                             ⡠⠏⡊⢿⣧⣅⠁⢀⠈⢤⡡⣆⢎⢆⢕⠠⠁⠹⢪⠨
+ ⚠ Status: 0.1.0. Pins grok-mermaid 0.2.3 and Pi 0.99.2.                                      ⢳⢰⠡⠘⣯⣿ ⠤⣴⡮⡪⢎⢎⠪⡈⠄ ⠅⡠
+                                                                                      ⢀⡀      ⠈⢎⢆⢑⠸⣯⣐⣩⢶⡱⡕⡒⡂⠎⡄⠔ ⠐⢐⠄          ⣀
+ Wide Mermaid diagrams, redrawn to fit.                                             ⡰⣷⢹⡇⣀⡀⡀ ⡀⢀ ⠈⢪⡂⢂⠛⢟⡮⡳⡹⡜⡆⠒⡜⡌⡢⡠⠠⠐⡐        ⢀⡰⣺⢰⡷
+                                                                                   ⢸⢮⣜⢗⣫⣡⡣⣍⡫⣚⢖⢖⣄⡢⢽⡄⡘⣭⡯⣟⣮⣮⣧⣰⢕⢕⠱⠘⢌⢢⠨⡈⢌⠢⢀⢢⠨⡬⡪⣢⢎⡝⡼⣸⠽
+                                                                                    ⢿⢕⣝⢮⡺⡺⣪⣫⢳⢽⣝⠧⣟⣯⡷⢂⠪⣫⢣⡣⡳⠨⡈⡂⠡⠈⡪⡪⣢⢣⠱⡢⡝⡢⢣⢣⢱⡹⡸⡜⣎⢗⣝⢆
+                                                                                   ⡰⡽⣎⡮⡳⣝⣝⢮⢮⡳⣣⡳⣝⣜⢜⢟⠔⢸⡣⡣⠣⢁⠂⢆⠪⢠⢣⢕⢬⠸⡘⡮⢞⢌⢂⡇⡧⣣⡳⣝⢮⢮⡳⣳⣫⡀
+                                                                                  ⢰⡻⣮⢟⡮⣫⢺⢜⡗⣗⣝⢮⡺⡮⡳⣯⣿⣲⢝⢌⢌⠈⠄⢌⠢⠥⣕⢧⣳⢱⣱⣱⡣⠡⢁⢯⢎⡞⣮⢺⣪⢳⡳⣝⢟⣞⢦
+                                                                                  ⢸⣳⣸⡱⡹⡺⣮⡳⣝⢎⡮⣗⢝⡮⢏⢖⢼⠜⣉⠢⡂⡎⣜⢦⢳⣓⢦⢢⣉⣩⠗⢝⢙⠎⢦⣻⢳⣝⢮⡳⣕⣯⢾⢕⢯⣳⡽
+                                                                                  ⠘⣽⣳⣧⡏⢎⢏⢟⣿⡏⣗⢵⢫⡾⠧⡫⡣⢱⢸⢜⡜⢮⡪⡪⣓⢎⠮⣣⣳⡳⠡⡑⢔⠔⡘⣮⡗⣝⢯⣿⢫⡳⣝⣔⣽⢮⠿
+                                                                                   ⢵⡻⡷⣟⣷⡳⢵⣣⣷⠼⢾⢿⢦⣠⣿⢟⡼⠓⡥⣿⣫⣿⣯⣗⣯⡯⣿⣊⠻⣌⡈⠐⡁⡮⢾⢾⢴⡯⣪⣎⣞⡮⣟⣾⣫⠇
+                                                                                    ⠙⠽⣕⢽⢿⡿⡳⣕⢧⢶⣞⢜⢷⡻⡟⢰⣵⠞⡭⡢⡆⠈⠛⣿⣿⠛⢳⣵⢹⣿⢿⡻⡽⡞⣵⢆⣍⡫⣯⡾⡏⡷⠑⠁
+                                                                                      ⠑⢯⢛⣮⢞⢧⢅⣽⣝⢎⢷⢟⡇⢸⡗⡜⡜⡮⣳⢢⢲⢸⣿⡦⡿⡌⢸⣝⢕⡯⣺⣼⡬⡙⡳⢵⢏⢻⠞⠁
+                                                                                       ⡮⡯⡳⣕⢯⢧⢻⣿⣽⣘⢝⣇⠸⣷⢱⢱⠹⡸⡱⡑⣽⣿⣝⣧⠃⣿⣮⣗⣯⠟⣹⣺⣪⢶⢎⡗⣜
+                                                                                      ⢰⢼⢝⢮⡳⣝⣮⡯⡻⣟⡿⣿⢿⣦⡑⢝⢮⠼⣬⣼⣾⣟⡽⣋⠯⢰⣿⢼⡗⠳⣬⡽⣕⢗⡽⣕⣗⠸
+                                                                                      ⡣⡹⣗⢽⡪⣗⢵⣛⣳⡻⣽⡨⣟⠙⢹⣶⣿⣷⣍⣫⣋⣏⣴⣿⣞⣿⡁⣾⡅⡚⣿⡫⡮⣳⢣⢳⡣⡣⡂
+                                                                                     ⠠⡎⣲⢏⢗⢽⡪⣗⢧⡳⣝⡭⣫⢟⡯⣗⢿⣳⣟⡿⣟⢗⢻⠋⣾⣗⢟⡾⣻⢑⠇⣗⣝⢮⡳⣹⢸⢎⢧⡂⢀
+                                                                                      ⢉⣾⣧⠣⡫⡞⣎⣗⢯⡞⣽⣪⡳⣝⢮⢺⣻⣮⣷⡿⣝⢂⣸⣷⡳⡳⣝⡎⢮⢣⣿⡾⣮⣺⡨⣪⡾⢳⢬⠦⡀⠄
+                                                                                    ⢰⠐⢵⡸⠛⢿⣮⣪⡧⣳⣵⣿⣻⡖⡝⡮⣳⡢⣿⢿⠑⢻⣷⡭⣿⣻⠼⣕⣯⢊⠎⣼⣯⢿⣹⣽⢿⠋  ⢻⡴⣼⡎⡄
+                                                                                    ⠛⠒⠸⢁⠐⢀⢜⠿⢟⣫⡛⣚⠍⠈⢞⣾⠷⡧⢝⣟  ⠉ ⣗⣗⢝⣚⠞⢟⠎⠙⠚⠓⠙⢕⠹⠕⢌⡈⡀⠉⠣⠉
+                                                                                    ⡠⠂⠠⠂⣁⢯⡢⠅       ⠣⣣⠷⠛⡝⠆   ⠨⡋⡉⠓⠮⠈      ⠑⠳⠿⠠⡂⢅ ⢑⡀
+                                                                                   ⡜⠒⣳⢤⢞⢡            ⠲⡔⡚     ⡏⠑⠊          ⠈⢇⠕⣴⡞⠋⢁⠆
+                                                                                  ⢰⡻⣽⠟⡏⠅              ⠰⢐     ⠥⠁            ⠈⠓⠽⢶⡶⣻⡌⡆
+                                                                                  ⢸⡀⡟⡴⠊                ⡡⠄   ⡰⡀                ⠁⢟⣅⠺⢰
+                                                                                                     ⠠⠰⠝⡕⠄⣄⠠⢗⡱⠴                 ⠁ ⠁
+                                                                                                      ⠐⠈     ⠑⠅
 ```
 
-pi-markdown-rendering is a [Pi](https://github.com/earendil-works/pi) extension that makes model answers render cleanly in the terminal. It registers a Markdown transformer that runs after Pi's own: it shows h3–h6 headings without their `#` marks, and it redraws the Mermaid diagrams that Pi left undrawn because they are too wide. The banner above is a [`grok-mermaid`](https://www.npmjs.com/package/grok-mermaid) drawing, the same library Pi uses.
+pi-markdown-rendering is a [Pi](https://github.com/earendil-works/pi) extension that makes model answers render cleanly in the terminal. It registers a Markdown transformer that runs after Pi's own: it shows h3–h6 headings without their `#` marks, and it redraws the Mermaid diagrams that Pi left undrawn because they are too wide.
 
 The model needs no instructions about how to write Markdown. The extension changes only what the terminal shows: the session keeps the text the model wrote.
 
@@ -58,10 +79,10 @@ There is nothing to turn on. Ask the model for an answer with deep headings or a
 
 ### Headings
 
-| The model writes                                    | Pi shows                       |
-| --------------------------------------------------- | ------------------------------ |
-| `### Title` to `###### Title`                       | `Title`, styled as `## Title`  |
-| `###` inside a code block or a code span            | `###`, unchanged               |
+| The model writes                         | Pi shows                      |
+| ---------------------------------------- | ----------------------------- |
+| `### Title` to `###### Title`            | `Title`, styled as `## Title` |
+| `###` inside a code block or a code span | `###`, unchanged              |
 
 ### A wide flowchart
 
@@ -96,11 +117,11 @@ sequenceDiagram
 
 The extension has no settings file. It reads these sources:
 
-| Source                              | Use                                                                                           |
-| ----------------------------------- | --------------------------------------------------------------------------------------------- |
-| `markdown.mermaid` in Pi settings   | `"off"` turns off the diagram part; `"final"` and `"streaming"` keep it on. Default `"streaming"` |
-| `ctx.ui.theme` on `session_start`   | The colors of a redrawn diagram. Before that event, the rows have no color                    |
-| `context.availableWidth`            | The width each diagram must fit, given by Pi for each message                                 |
+| Source                            | Use                                                                                               |
+| --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `markdown.mermaid` in Pi settings | `"off"` turns off the diagram part; `"final"` and `"streaming"` keep it on. Default `"streaming"` |
+| `ctx.ui.theme` on `session_start` | The colors of a redrawn diagram. Before that event, the rows have no color                        |
+| `context.availableWidth`          | The width each diagram must fit, given by Pi for each message                                     |
 
 Headings are lifted in every mode, including `"off"`.
 
@@ -144,12 +165,12 @@ flowchart TD
     box -- no --> raw
 ```
 
-| Diagram kind      | Variants, in order                                                           |
-| ----------------- | ---------------------------------------------------------------------------- |
+| Diagram kind         | Variants, in order                                                              |
+| -------------------- | ------------------------------------------------------------------------------- |
 | `flowchart`, `graph` | Header direction `LR` → `TD`, `RL` → `BT`. A subgraph keeps its own `direction` |
-| `classDiagram`    | `direction LR` → `TB`, `RL` → `BT`                                            |
-| `sequenceDiagram` | Labels longer than 24 characters numbered, then every label numbered          |
-| Any other         | None: framed source                                                          |
+| `classDiagram`       | `direction LR` → `TB`, `RL` → `BT`                                              |
+| `sequenceDiagram`    | Labels longer than 24 characters numbered, then every label numbered            |
+| Any other            | None: framed source                                                             |
 
 W in `(diagram needs W columns)` is the smallest width among all drawings, the original included.
 
@@ -157,11 +178,11 @@ W in `(diagram needs W columns)` is the smallest width among all drawings, the o
 
 A sequence variant replaces a message or note label with its key and keeps the full text for the legend. The legend is a Markdown ordered list, so it wraps to the terminal width. Markdown punctuation in a label is escaped, because Mermaid labels are plain text.
 
-| Source                        | Keys                                                                                 |
-| ----------------------------- | ------------------------------------------------------------------------------------ |
-| No `autonumber`               | Each numbered label takes the next key: 1, 2, 3                                      |
-| Plain `autonumber`            | A message shows its own number with an empty label; a long note takes a key after the last message |
-| `autonumber` with start or step | No variant                                                                         |
+| Source                          | Keys                                                                                               |
+| ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| No `autonumber`                 | Each numbered label takes the next key: 1, 2, 3                                                    |
+| Plain `autonumber`              | A message shows its own number with an empty label; a long note takes a key after the last message |
+| `autonumber` with start or step | No variant                                                                                         |
 
 24 characters is the width `grok-mermaid` cuts participant names to. Long labels go first, so short labels stay readable inside the diagram.
 
@@ -169,14 +190,14 @@ A sequence variant replaces a message or note label with its key and keeps the f
 
 Each module owns one reason to change. `index.ts` only registers the transformer and keeps the UI context.
 
-| Module           | Owns                                                                 | Changes when                              |
-| ---------------- | -------------------------------------------------------------------- | ----------------------------------------- |
-| `index.ts`       | Registration, the `markdown.mermaid` mode, the theme from `ctx.ui`   | Pi's extension API changes                |
+| Module           | Owns                                                                     | Changes when                                       |
+| ---------------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
+| `index.ts`       | Registration, the `markdown.mermaid` mode, the theme from `ctx.ui`       | Pi's extension API changes                         |
 | `transformer.ts` | Token walk, when to draw, Pi's row format, theme colors, the legend list | Pi's Markdown pipeline or its diagram look changes |
-| `headings.ts`    | h3–h6 → h2                                                           | pi-tui heading styles change              |
-| `fit.ts`         | Pick the first drawing that fits, or the framed source               | The fit policy changes                    |
-| `layouts.ts`     | The variants of each diagram kind                                    | A diagram kind gets a new variant         |
-| `sequence.ts`    | Numbered labels and the legend                                       | `grok-mermaid`'s sequence output changes  |
+| `headings.ts`    | h3–h6 → h2                                                               | pi-tui heading styles change                       |
+| `fit.ts`         | Pick the first drawing that fits, or the framed source                   | The fit policy changes                             |
+| `layouts.ts`     | The variants of each diagram kind                                        | A diagram kind gets a new variant                  |
+| `sequence.ts`    | Numbered labels and the legend                                           | `grok-mermaid`'s sequence output changes           |
 
 ```mermaid
 classDiagram
@@ -254,11 +275,11 @@ pi -e ./src/index.ts # load the working tree in Pi
 
 Gate every change before a commit:
 
-| Command              | Checks                                                                   |
-| -------------------- | ------------------------------------------------------------------------ |
-| `bun run typecheck`  | `tsc --noEmit`, strict                                                   |
-| `bun run lint`       | Biome                                                                    |
-| `bun run complexity` | ESLint, cyclomatic complexity < 4 per function                           |
+| Command              | Checks                                                                         |
+| -------------------- | ------------------------------------------------------------------------------ |
+| `bun run typecheck`  | `tsc --noEmit`, strict                                                         |
+| `bun run lint`       | Biome                                                                          |
+| `bun run complexity` | ESLint, cyclomatic complexity < 4 per function                                 |
 | `bun run test`       | vitest, with real diagrams run through Pi's transformer and then the extension |
 
 `pre-commit` runs typecheck, lint and complexity. `pre-push` runs typecheck and tests.
